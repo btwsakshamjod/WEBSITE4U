@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" fill="none">
+  <defs>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#0f172a" flood-opacity=".18"/>
+    </filter>
+    <filter id="chairShadow" x="-40%" y="-30%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#2563eb" flood-opacity=".22"/>
+    </filter>
+    <linearGradient id="screen" x1="85" y1="70" x2="780" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <linearGradient id="chairBlue" x1="548" y1="165" x2="724" y2="309" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="920" height="430" fill="white"/>
+  <g filter="url(#softShadow)">
+    <rect x="28" y="15" width="700" height="382" rx="18" fill="#101827"/>
+    <rect x="45" y="33" width="666" height="329" rx="4" fill="url(#screen)"/>
+    <path d="M23 395h710c-8 14-23 21-44 21H67c-21 0-36-7-44-21Z" fill="#111827"/>
+    <rect x="314" y="394" width="124" height="10" rx="5" fill="#020617" opacity=".5"/>
+  </g>
+
+  <g>
+    <text x="86" y="76" fill="#020617" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900">Nexa.</text>
+    <text x="330" y="75" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700">Home</text>
+    <text x="385" y="75" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700">Shop</text>
+    <text x="436" y="75" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700">Categories</text>
+    <text x="525" y="75" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700">About</text>
+    <text x="586" y="75" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700">Contact</text>
+    <circle cx="651" cy="72" r="6" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M671 66h8l-1.8 12h-5.8L669 59h-7" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <text x="86" y="150" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="900">New Arrivals</text>
+    <text x="86" y="192" fill="#020617" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="950">Summer</text>
+    <text x="86" y="235" fill="#020617" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="950">Collection</text>
+    <text x="86" y="281" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500">Premium quality. Modern</text>
+    <text x="86" y="308" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500">design. Made for your</text>
+    <text x="86" y="335" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500">lifestyle.</text>
+    <rect x="86" y="359" width="92" height="43" rx="21.5" fill="#2563eb"/>
+    <text x="113" y="386" fill="white" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="900">Shop Now</text>
+  </g>
+
+  <g>
+    <line x1="467" y1="160" x2="467" y2="339" stroke="#475569" stroke-width="3"/>
+    <ellipse cx="467" cy="341" rx="58" ry="8" fill="#cbd5e1"/>
+    <ellipse cx="467" cy="154" rx="68" ry="10" fill="#d9dfe8"/>
+    <rect x="449" y="93" width="34" height="55" rx="9" fill="#d3a47b"/>
+    <path d="M444 105c18-11 32-10 45 0v33c-14 9-29 9-45 0v-33Z" fill="#c08a62"/>
+    <rect x="452" y="82" width="28" height="17" rx="8" fill="#f0d5bd"/>
+  </g>
+
+  <g filter="url(#chairShadow)">
+    <path d="M566 191c0-33 27-60 60-60h71c38 0 68 31 68 68v74c0 40-32 72-72 72H636c-39 0-70-31-70-70v-84Z" fill="url(#chairBlue)"/>
+    <path d="M596 161c-5 42-4 97 7 151" stroke="#1e40af" stroke-width="6" opacity=".34"/>
+    <path d="M659 142c-7 55-6 119 4 190" stroke="#1e40af" stroke-width="6" opacity=".28"/>
+    <path d="M730 162c-8 44-10 96-1 148" stroke="#1e40af" stroke-width="6" opacity=".26"/>
+    <path d="M617 346l-28 51M714 346l33 52" stroke="#7c4a2d" stroke-width="8" stroke-linecap="round"/>
+    <path d="M600 345h133" stroke="#7c4a2d" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="710" y="62" width="180" height="350" rx="39" fill="#101827"/>
+    <rect x="722" y="76" width="156" height="322" rx="28" fill="#ffffff"/>
+    <path d="M774 76h52c-2 14-8 20-23 20h-6c-15 0-21-6-23-20Z" fill="#101827"/>
+  </g>
+
+  <g>
+    <text x="740" y="109" fill="#020617" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800">9:01</text>
+    <text x="741" y="136" fill="#020617" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="900">Nexa.</text>
+    <circle cx="842" cy="133" r="7" stroke="#64748b" stroke-width="1.6"/>
+    <path d="M859 128h8l-1.5 10h-5L858 122h-6" stroke="#334155" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="741" y="169" fill="#020617" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="950">Best Selling</text>
+    <text x="741" y="193" fill="#020617" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="950">Products</text>
+
+    <rect x="741" y="215" width="31" height="23" rx="11.5" fill="#2563eb"/>
+    <text x="752" y="230" fill="white" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="900">All</text>
+    <rect x="778" y="215" width="42" height="23" rx="11.5" fill="#f1f5f9"/>
+    <text x="789" y="230" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="800">Chair</text>
+    <rect x="826" y="215" width="39" height="23" rx="11.5" fill="#f1f5f9"/>
+    <text x="836" y="230" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="800">Lamp</text>
+
+    <rect x="741" y="254" width="122" height="111" rx="14" fill="#f1f5f9"/>
+    <path d="M774 309c0-21 17-38 38-38h20c15 0 27 12 27 27v26c0 18-14 32-32 32h-24c-16 0-29-13-29-29v-18Z" fill="#e2e8f0"/>
+    <path d="M792 360l-11 24M842 359l14 25" stroke="#9ca3af" stroke-width="4" stroke-linecap="round"/>
+    <text x="741" y="387" fill="#020617" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="950">Minimal Chair</text>
+    <text x="741" y="403" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800">₹4,999</text>
+  </g>
+</svg>

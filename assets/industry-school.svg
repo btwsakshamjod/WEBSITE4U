@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 360">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#edf5ff"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1">
+      <stop stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="620" height="360" rx="28" fill="url(#bg)"/>
+  <ellipse cx="285" cy="315" rx="210" ry="22" fill="#dbeafe"/>
+  <rect x="55" y="48" width="395" height="238" rx="18" fill="#0f172a"/>
+  <rect x="70" y="64" width="365" height="198" rx="9" fill="#fff"/>
+  <rect x="70" y="64" width="365" height="34" fill="#f8fbff"/>
+  <circle cx="88" cy="81" r="5" fill="#f59e0b"/>
+  <text x="100" y="85" font-family="Inter,Arial" font-size="13" font-weight="800" fill="#1f2937">BrightFuture</text>
+  <text x="284" y="85" font-family="Inter,Arial" font-size="8" font-weight="700" fill="#2563eb">Home</text>
+  <text x="322" y="85" font-family="Inter,Arial" font-size="8" fill="#64748b">About</text>
+  <text x="360" y="85" font-family="Inter,Arial" font-size="8" fill="#64748b">Courses</text>
+  <rect x="92" y="124" width="118" height="16" rx="8" fill="#111827"/>
+  <rect x="92" y="148" width="155" height="16" rx="8" fill="#2563eb"/>
+  <rect x="92" y="178" width="135" height="8" rx="4" fill="#cbd5e1"/>
+  <rect x="92" y="198" width="84" height="26" rx="13" fill="url(#blue)"/>
+  <rect x="190" y="198" width="82" height="26" rx="13" fill="#f1f5f9"/>
+  <rect x="275" y="112" width="132" height="118" rx="22" fill="#e0f2fe"/>
+  <circle cx="320" cy="152" r="24" fill="#fed7aa"/>
+  <path d="M286 230c8-42 66-42 76 0z" fill="#2563eb"/>
+  <circle cx="368" cy="152" r="24" fill="#fed7aa"/>
+  <path d="M334 230c8-42 66-42 76 0z" fill="#0f172a"/>
+  <rect x="92" y="236" width="310" height="42" rx="12" fill="#2563eb"/>
+  <text x="113" y="260" font-family="Inter,Arial" font-size="16" font-weight="900" fill="#fff">25+</text>
+  <text x="190" y="260" font-family="Inter,Arial" font-size="16" font-weight="900" fill="#fff">15k+</text>
+  <text x="278" y="260" font-family="Inter,Arial" font-size="16" font-weight="900" fill="#fff">50+</text>
+  <text x="350" y="260" font-family="Inter,Arial" font-size="16" font-weight="900" fill="#fff">100%</text>
+  <path d="M35 294h430l52 38H91z" fill="#dbe3ee"/>
+  <rect x="205" y="306" width="130" height="12" rx="6" fill="#94a3b8"/>
+  <rect x="405" y="124" width="105" height="172" rx="22" fill="#111827"/>
+  <rect x="416" y="141" width="83" height="134" rx="12" fill="#fff"/>
+  <rect x="426" y="157" width="64" height="46" rx="10" fill="#2563eb"/>
+  <rect x="426" y="214" width="64" height="8" rx="4" fill="#cbd5e1"/>
+  <rect x="426" y="232" width="42" height="20" rx="10" fill="#2563eb"/>
+</svg>

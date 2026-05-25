@@ -1,0 +1,108 @@
+CREATE TABLE IF NOT EXISTS admins (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(80) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS settings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  setting_key VARCHAR(120) NOT NULL UNIQUE,
+  setting_value TEXT NULL
+);
+
+CREATE TABLE IF NOT EXISTS industries (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(160) NOT NULL,
+  subtitle VARCHAR(180) NULL,
+  image VARCHAR(255) NULL,
+  sort_order INT DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS stats (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  icon VARCHAR(80) DEFAULT 'star',
+  value_text VARCHAR(80) NOT NULL,
+  label VARCHAR(160) NOT NULL,
+  sort_order INT DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS services (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(180) NOT NULL,
+  description TEXT NULL,
+  logo VARCHAR(255) NULL,
+  sort_order INT DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS why_cards (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  icon VARCHAR(80) DEFAULT 'star',
+  title VARCHAR(180) NOT NULL,
+  description TEXT NULL,
+  sort_order INT DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS projects (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  category VARCHAR(160) NULL,
+  title VARCHAR(180) NOT NULL,
+  image VARCHAR(255) NULL,
+  sort_order INT DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS features (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  icon VARCHAR(80) DEFAULT 'check-circle',
+  title VARCHAR(180) NOT NULL,
+  description TEXT NULL,
+  sort_order INT DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS pricing_plans (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(180) NOT NULL,
+  price VARCHAR(80) NOT NULL,
+  description TEXT NULL,
+  button_text VARCHAR(80) DEFAULT 'Chat Now',
+  is_featured TINYINT(1) DEFAULT 0,
+  sort_order INT DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS pricing_features (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  plan_id INT NOT NULL,
+  feature_text VARCHAR(255) NOT NULL,
+  sort_order INT DEFAULT 0,
+  FOREIGN KEY (plan_id) REFERENCES pricing_plans(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS testimonials (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(180) NOT NULL,
+  role VARCHAR(180) NULL,
+  quote TEXT NOT NULL,
+  image VARCHAR(255) NULL,
+  rating INT DEFAULT 5,
+  sort_order INT DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS leads (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(180) NOT NULL,
+  phone VARCHAR(80) NOT NULL,
+  business_type VARCHAR(180) NULL,
+  message TEXT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT IGNORE INTO admins (username, password_hash)
+VALUES ('admin', '$2y$10$xpVOH8RPJnZL1J1S3gucB.HgmqOzs1vCZkOknsTw8eyEU7LrcslFi');
