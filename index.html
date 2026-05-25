@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Websites4U | Premium Web Design Agency India</title>
+  <meta name="description" content="Premium websites for Indian schools, colleges, ecommerce brands, cafes, hotels, startups, news portals and mobile apps. SEO, speed and WhatsApp lead generation included." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          },
+          colors: {
+            brand: '#2563eb',
+            ink: '#111111',
+            muted: '#374151',
+            soft: '#f7f8fc',
+            cloud: '#f1f5f9'
+          },
+          boxShadow: {
+            premium: '0 28px 80px rgba(15, 23, 42, .12)',
+            glass: '0 18px 60px rgba(15, 23, 42, .10)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --brand: #2563eb;
+      --ink: #111111;
+      --muted: #374151;
+      --line: rgba(15, 23, 42, .09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 4%, rgba(37, 99, 235, .10), transparent 28rem),
+        radial-gradient(circle at 92% 12%, rgba(14, 165, 233, .09), transparent 26rem),
+        linear-gradient(180deg, #ffffff 0%, #f7f8fc 45%, #ffffff 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main,
+    section,
+    footer {
+      max-width: 100vw;
+      overflow-x: clip;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(15, 23, 42, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, .045) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+
+    a,
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .glass {
+      border: 1px solid rgba(255, 255, 255, .72);
+      background: rgba(255, 255, 255, .72);
+      box-shadow: 0 18px 60px rgba(15, 23, 42, .10);
+      backdrop-filter: blur(22px);
+    }
+
+    .hairline {
+      border: 1px solid var(--line);
+    }
+
+    .nav-scrolled {
+      border-color: rgba(15, 23, 42, .10);
+      background: rgba(255, 255, 255, .82);
+      box-shadow: 0 12px 42px rgba(15, 23, 42, .08);
+      backdrop-filter: blur(22px);
+    }
+
+    .orb {
+      position: absolute;
+      z-index: -1;
+      width: 22rem;
+      height: 22rem;
+      border-radius: 999px;
+      filter: blur(48px);
+      opacity: .48;
+      pointer-events: none;
+    }
+
+    .hero-stage {
+      perspective: 1400px;
+      transform-style: preserve-3d;
+    }
+
+    .hero-grid,
+    .hero-copy,
+    .hero-stage,
+    .hero-title {
+      min-width: 0;
+    }
+
+    .hero-title {
+      width: min(100%, 41rem);
+      max-width: min(41rem, calc(100vw - 2rem));
+      font-size: clamp(2.9rem, 4.55vw, 4.75rem);
+      line-height: 1.04;
+    }
+
+    .laptop {
+      position: relative;
+      min-height: 350px;
+      transform: rotateX(5deg) rotateY(-15deg) rotateZ(1deg);
+      transform-style: preserve-3d;
+    }
+
+    .laptop-screen {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border: 1px solid rgba(15, 23, 42, .12);
+      border-radius: 24px;
+      background: linear-gradient(145deg, #ffffff, #eef4ff);
+      box-shadow: 0 38px 90px rgba(15, 23, 42, .18);
+    }
+
+    .laptop-base {
+      position: absolute;
+      left: 10%;
+      right: 4%;
+      bottom: -24px;
+      height: 40px;
+      border-radius: 8px 8px 26px 26px;
+      background: linear-gradient(180deg, #eef2f7, #cbd5e1);
+      box-shadow: 0 32px 64px rgba(15, 23, 42, .18);
+      transform: rotateX(72deg);
+      transform-origin: top;
+    }
+
+    .browser-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #cbd5e1;
+    }
+
+    .phone {
+      position: absolute;
+      right: -18px;
+      bottom: -10px;
+      width: 145px;
+      height: 278px;
+      overflow: hidden;
+      border: 9px solid #111827;
+      border-radius: 34px;
+      background: #ffffff;
+      box-shadow: 0 32px 70px rgba(15, 23, 42, .23);
+      transform: rotateZ(6deg) translateZ(90px);
+    }
+
+    .floating-card {
+      position: absolute;
+      z-index: 8;
+      border: 1px solid rgba(255,255,255,.8);
+      background: rgba(255,255,255,.76);
+      box-shadow: 0 20px 55px rgba(15, 23, 42, .12);
+      backdrop-filter: blur(18px);
+    }
+
+    .particle {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, .38);
+      box-shadow: 0 0 24px rgba(37, 99, 235, .18);
+      pointer-events: none;
+    }
+
+    .shine {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shine::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -65%;
+      width: 36%;
+      height: 220%;
+      transform: rotate(22deg);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent);
+      animation: shine 5.5s ease-in-out infinite;
+    }
+
+    @keyframes shine {
+      0%, 58% { left: -70%; }
+      78%, 100% { left: 130%; }
+    }
+
+    .marquee-track {
+      animation: marquee 26s linear infinite;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .portfolio-img {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .portfolio-showcase {
+      background:
+        radial-gradient(circle at 4% 20%, rgba(37, 99, 235, .08), transparent 22%),
+        linear-gradient(135deg, rgba(255,255,255,.96), rgba(248,250,252,.82));
+    }
+
+    .case-card {
+      min-height: 250px;
+      border: 1px solid rgba(255, 255, 255, .7);
+      box-shadow: 0 28px 80px rgba(15, 23, 42, .12);
+    }
+
+    .case-card-sm {
+      min-height: 185px;
+      box-shadow: 0 22px 58px rgba(15, 23, 42, .10);
+    }
+
+    .product-preview-card {
+      border: 1px solid rgba(15, 23, 42, .08);
+      background: rgba(255, 255, 255, .9);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, .08);
+    }
+
+    .why-section {
+      background:
+        radial-gradient(circle at 88% 2%, rgba(37, 99, 235, .10), transparent 18%),
+        radial-gradient(circle at 0% 100%, rgba(37, 99, 235, .08), transparent 20%),
+        linear-gradient(135deg, #ffffff, #f8fbff);
+    }
+
+    .why-card {
+      border: 1px solid rgba(15, 23, 42, .07);
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 28px 80px rgba(15,23,42,.08);
+    }
+
+    .why-card::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: 0;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, #2563eb, transparent);
+      opacity: .75;
+    }
+
+    .device-preview {
+      position: relative;
+      min-height: 280px;
+    }
+
+    .preview-laptop {
+      position: absolute;
+      left: 3%;
+      bottom: 0;
+      width: 72%;
+      aspect-ratio: 1.72;
+      border: 12px solid #0f172a;
+      border-bottom-width: 18px;
+      border-radius: 20px 20px 8px 8px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 32px 70px rgba(15, 23, 42, .22);
+    }
+
+    .preview-phone {
+      position: absolute;
+      right: 12%;
+      bottom: 2px;
+      width: 22%;
+      aspect-ratio: .49;
+      border: 9px solid #0f172a;
+      border-radius: 30px;
+      background: white;
+      overflow: hidden;
+      box-shadow: 0 28px 54px rgba(15, 23, 42, .24);
+    }
+
+    .tilt {
+      transform-style: preserve-3d;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .tilt:hover {
+      box-shadow: 0 28px 85px rgba(15, 23, 42, .14);
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      border: 1px solid rgba(37, 99, 235, .14);
+      border-radius: 999px;
+      background: rgba(37, 99, 235, .06);
+      padding: .45rem .75rem;
+      color: #1d4ed8;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .reveal,
+    .rv,
+    .rv-l,
+    .rv-r {
+      opacity: 0;
+      transform: translateY(34px);
+      will-change: transform, opacity;
+    }
+
+    .rv-l {
+      transform: translateX(-42px);
+    }
+
+    .rv-r {
+      transform: translateX(42px);
+    }
+
+    .reveal.is-visible,
+    .rv.is-visible,
+    .rv-l.is-visible,
+    .rv-r.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .modal-card,
+    .nav-shell,
+    .hero-art,
+    .industry-card,
+    .brand-service-card,
+    .why-card,
+    .case-card,
+    .case-card-sm,
+    .product-preview-card {
+      will-change: transform;
+    }
+
+    html.lenis {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .rv,
+      .rv-l,
+      .rv-r {
+        opacity: 1;
+        transform: none;
+      }
+
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+      }
+    }
+
+    .swiper {
+      overflow: visible;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+
+    .home-shell {
+      border: 1px solid rgba(15, 23, 42, .08);
+      background: rgba(255, 255, 255, .76);
+      box-shadow: 0 24px 90px rgba(15, 23, 42, .09);
+      backdrop-filter: blur(26px);
+    }
+
+    .hero-blue {
+      color: var(--brand);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-blue::after {
+      content: "";
+      position: absolute;
+      left: 8%;
+      right: 6%;
+      bottom: -.12em;
+      height: .12em;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, var(--brand), transparent);
+      transform: rotate(-3deg);
+      opacity: .65;
+    }
+
+    .device-orbit {
+      position: absolute;
+      left: 16%;
+      right: 11%;
+      bottom: 5%;
+      height: 86px;
+      border-radius: 50%;
+      border: 3px solid rgba(37, 99, 235, .24);
+      background: radial-gradient(ellipse at center, rgba(37, 99, 235, .13), rgba(255,255,255,.4) 56%, transparent 68%);
+      box-shadow: 0 0 18px rgba(37, 99, 235, .18), inset 0 0 16px rgba(37, 99, 235, .10);
+    }
+
+    .hero-laptop {
+      position: absolute;
+      left: 16%;
+      top: 8%;
+      width: 58%;
+      height: 430px;
+      transform: rotateZ(4deg);
+      transform-style: preserve-3d;
+      z-index: 4;
+    }
+
+    .hero-laptop-screen {
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      top: 0;
+      height: 286px;
+      overflow: hidden;
+      border: 9px solid #111827;
+      border-radius: 20px 20px 14px 14px;
+      background: #fff;
+      box-shadow: 0 32px 70px rgba(15, 23, 42, .18);
+      transform: perspective(900px) rotateX(-1deg);
+      transform-origin: bottom center;
+    }
+
+    .hero-keyboard {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 274px;
+      height: 126px;
+      border-radius: 12px 12px 38px 38px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,0) 42%),
+        linear-gradient(160deg, #f8fafc 0%, #dbe3ee 56%, #b8c2d0 100%);
+      box-shadow: 0 34px 64px rgba(15, 23, 42, .17);
+      transform: perspective(760px) rotateX(62deg);
+      transform-origin: top center;
+      overflow: hidden;
+    }
+
+    .hero-keyboard::before {
+      content: "";
+      position: absolute;
+      left: 15%;
+      right: 15%;
+      top: 18px;
+      height: 46px;
+      border-radius: 10px;
+      background-image:
+        linear-gradient(90deg, rgba(15,23,42,.80) 9px, transparent 10px),
+        linear-gradient(rgba(15,23,42,.80) 8px, transparent 9px);
+      background-size: 22px 16px;
+      opacity: .55;
+      filter: blur(.15px);
+    }
+
+    .hero-keyboard::after {
+      content: "";
+      position: absolute;
+      left: 38%;
+      right: 38%;
+      bottom: 24px;
+      height: 30px;
+      border-radius: 11px;
+      background: rgba(15, 23, 42, .12);
+      box-shadow: inset 0 2px 8px rgba(15,23,42,.08);
+    }
+
+    .hero-phone {
+      position: absolute;
+      right: 12%;
+      bottom: 17%;
+      width: 132px;
+      height: 266px;
+      overflow: hidden;
+      border: 9px solid #0f172a;
+      border-radius: 34px;
+      background: white;
+      box-shadow: 0 34px 72px rgba(15, 23, 42, .24);
+      transform: rotateZ(6deg);
+      z-index: 6;
+    }
+
+    .hero-sphere {
+      position: absolute;
+      border-radius: 999px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .hero-art {
+      filter: drop-shadow(0 36px 80px rgba(15, 23, 42, .12));
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 58%, rgba(0,0,0,.88) 72%, transparent 100%);
+      mask-image: radial-gradient(ellipse at center, #000 58%, rgba(0,0,0,.88) 72%, transparent 100%);
+    }
+
+    #heroVisual {
+      isolation: isolate;
+    }
+
+    #heroVisual .hero-art {
+      left: -4rem;
+      top: -2.5rem;
+      width: 118%;
+      height: 112%;
+      max-width: none;
+      object-fit: contain;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      }
+
+      .hero-copy {
+        padding-top: 1rem;
+      }
+    }
+
+    .industry-card {
+      border: 1px solid rgba(15, 23, 42, .08);
+      background: rgba(255, 255, 255, .96);
+      box-shadow: 0 14px 38px rgba(15, 23, 42, .08);
+      min-height: 164px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .mini-laptop {
+      position: relative;
+      height: 118px;
+      border-radius: 15px 15px 8px 8px;
+      border: 6px solid #111827;
+      background: white;
+      overflow: hidden;
+      box-shadow: 0 16px 30px rgba(15,23,42,.10);
+    }
+
+    .mini-laptop::after {
+      content: "";
+      position: absolute;
+      left: -8px;
+      right: -8px;
+      bottom: -12px;
+      height: 16px;
+      border-radius: 999px;
+      background: #cbd5e1;
+    }
+
+    .industry-preview {
+      height: 94px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 12px;
+      border: 0;
+      box-shadow: none;
+      background: #f8fbff;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .industry-card .industry-preview {
+      margin-bottom: 10px;
+    }
+
+    .showcaseSwiper .swiper-wrapper {
+      transition-timing-function: linear !important;
+      align-items: stretch;
+    }
+
+    .showcaseSwiper .swiper-slide {
+      height: auto;
+      overflow: visible;
+    }
+
+    .industry-strip-viewport {
+      overflow: hidden;
+      width: 100%;
+      padding: 0.25rem 0 0.75rem;
+    }
+
+    .industry-strip-track {
+      display: flex;
+      width: max-content;
+      gap: 28px;
+      animation: industry-scroll 34s linear infinite;
+      will-change: transform;
+    }
+
+    .industry-strip-track:hover {
+      animation-play-state: paused;
+    }
+
+    .industry-strip-img {
+      width: 980px;
+      max-width: none;
+      flex: 0 0 auto;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes industry-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(-50% - 14px)); }
+    }
+
+    .premium-service-card {
+      min-height: 158px;
+      border: 1px solid rgba(15, 23, 42, .08);
+      background: rgba(255, 255, 255, .86);
+      box-shadow: 0 18px 50px rgba(15, 23, 42, .07);
+      backdrop-filter: blur(20px);
+    }
+
+    .services-logo-grid {
+      background-image: radial-gradient(rgba(37, 99, 235, .13) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    .brand-service-card {
+      min-height: 132px;
+      border: 1px solid rgba(15, 23, 42, .08);
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 12px 34px rgba(15, 23, 42, .045);
+    }
+
+    .brand-service-logo {
+      height: 56px;
+      width: 56px;
+      object-fit: contain;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 10px 16px rgba(15, 23, 42, .08));
+    }
+
+    .service-visual {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      width: 92px;
+      height: 72px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(15, 23, 42, .08);
+      background: linear-gradient(135deg, #f8fafc, #eaf1ff);
+      box-shadow: 0 12px 26px rgba(15, 23, 42, .08);
+    }
+
+    .modal-open {
+      overflow: hidden;
+    }
+
+    #scroll-progress {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 9999;
+      height: 3px;
+      width: 0%;
+      border-radius: 0 999px 999px 0;
+      background: linear-gradient(90deg, #2563eb, #38bdf8);
+      transition: width .1s linear;
+    }
+
+    #cursor-glow {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: 0;
+      width: 320px;
+      height: 320px;
+      pointer-events: none;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(37, 99, 235, .075) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      transition: left .12s ease, top .12s ease;
+    }
+
+    @keyframes labelPop {
+      from { opacity: 0; transform: scale(.7); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .section-label {
+      animation: labelPop .5s cubic-bezier(.34, 1.56, .64, 1) both;
+    }
+
+    .hero-gradient-word {
+      background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stagger-grid > * {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .55s ease, transform .55s cubic-bezier(.25, .46, .45, .94);
+    }
+
+    .stagger-grid.in-view > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-grid.in-view > *:nth-child(1) { transition-delay: 0s; }
+    .stagger-grid.in-view > *:nth-child(2) { transition-delay: .07s; }
+    .stagger-grid.in-view > *:nth-child(3) { transition-delay: .14s; }
+    .stagger-grid.in-view > *:nth-child(4) { transition-delay: .21s; }
+    .stagger-grid.in-view > *:nth-child(5) { transition-delay: .28s; }
+    .stagger-grid.in-view > *:nth-child(6) { transition-delay: .35s; }
+    .stagger-grid.in-view > *:nth-child(7) { transition-delay: .42s; }
+    .stagger-grid.in-view > *:nth-child(8) { transition-delay: .49s; }
+    .stagger-grid.in-view > *:nth-child(9) { transition-delay: .56s; }
+    .stagger-grid.in-view > *:nth-child(10) { transition-delay: .63s; }
+    .stagger-grid.in-view > *:nth-child(11) { transition-delay: .70s; }
+    .stagger-grid.in-view > *:nth-child(12) { transition-delay: .77s; }
+
+    @keyframes lineDraw {
+      from { opacity: 0; transform: scaleX(0); }
+      to { opacity: .75; transform: scaleX(1); }
+    }
+
+    .why-card.in-view::before {
+      transform-origin: left;
+      animation: lineDraw .7s cubic-bezier(.25, .46, .45, .94) forwards;
+    }
+
+    @keyframes pricePop {
+      from { opacity: 0; transform: translateY(40px) scale(.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .price-pop {
+      animation: pricePop .65s cubic-bezier(.34, 1.56, .64, 1) both;
+    }
+
+    @keyframes ctaShimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    #contact .bg-ink {
+      background: linear-gradient(135deg, #0f172a 0%, #111827 40%, #0f172a 60%, #111827 100%);
+      background-size: 200% 200%;
+      animation: ctaShimmer 8s linear infinite;
+    }
+
+    .wa-pulse {
+      position: relative;
+    }
+
+    .wa-pulse::before {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border: 2px solid rgba(16, 185, 129, .5);
+      border-radius: 999px;
+      animation: waPing 2s cubic-bezier(0, 0, .2, 1) infinite;
+    }
+
+    @keyframes waPing {
+      0% { opacity: .8; transform: scale(.92); }
+      75%, 100% { opacity: 0; transform: scale(1.4); }
+    }
+
+    .mag-card {
+      transition: transform .18s ease, box-shadow .22s ease;
+      will-change: transform;
+    }
+
+    .industry-card,
+    .brand-service-card,
+    .premium-service-card,
+    .marquee-track article {
+      transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), box-shadow .3s ease, border-color .3s ease;
+    }
+
+    .industry-card:hover,
+    .brand-service-card:hover,
+    .premium-service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(37, 99, 235, .2);
+      box-shadow: 0 28px 70px rgba(15, 23, 42, .12);
+    }
+
+    .marquee-track article:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 28px 70px rgba(15, 23, 42, .13);
+    }
+
+    .nav-link-anim {
+      position: relative;
+    }
+
+    .nav-link-anim::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: #2563eb;
+      transition: width .25s ease;
+    }
+
+    .nav-link-anim:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      body::before {
+        background-size: 44px 44px;
+      }
+
+      .laptop {
+        min-height: 280px;
+        transform: rotateX(3deg) rotateY(-8deg) rotateZ(1deg);
+      }
+
+      .phone {
+        width: 108px;
+        height: 214px;
+        right: -4px;
+      }
+
+      .hero-title {
+        width: calc(100vw - 2rem);
+        max-width: calc(100vw - 2rem);
+        font-size: clamp(2.05rem, 8.4vw, 2.55rem);
+        line-height: 1.08;
+        overflow-wrap: break-word;
+      }
+
+      .hero-copy,
+      .hero-stage {
+        width: calc(100vw - 2rem);
+        min-width: 0;
+      }
+
+      .hero-grid {
+        width: calc(100vw - 2rem);
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-laptop {
+        left: 8%;
+        top: 8%;
+        width: 78%;
+        height: 330px;
+      }
+
+      .hero-phone {
+        right: 2%;
+        bottom: 7%;
+        width: 112px;
+        height: 222px;
+      }
+
+      .hero-art {
+        -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+      }
+
+      #heroVisual {
+        min-height: 330px !important;
+        overflow: hidden;
+      }
+
+      #heroVisual .hero-art {
+        left: 50%;
+        top: 0;
+        width: 112%;
+        height: 100%;
+        transform: translateX(-50%);
+      }
+
+      .hero-ctas a {
+        width: 100%;
+      }
+
+      .device-orbit {
+        bottom: 5%;
+        height: 54px;
+      }
+
+      .hero-eyebrow {
+        max-width: calc(100vw - 2rem);
+        white-space: normal;
+      }
+
+      .mobile-safe-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <div class="fixed inset-x-0 top-0 z-50 px-4 py-3">
+    <nav id="navbar" class="home-shell mx-auto flex max-w-[1450px] items-center justify-between rounded-[1.7rem] px-5 py-3 transition-all duration-300 md:px-7">
+      <a href="#home" class="flex items-center gap-3">
+        <span class="text-2xl font-black tracking-tight text-ink md:text-3xl">Websites<span class="text-brand">4U</span></span>
+        <span class="hidden border-l border-slate-200 pl-3 text-[10px] font-black uppercase tracking-wide text-slate-400 sm:block">Websites that grow businesses</span>
+      </a>
+
+      <div class="hidden h-16 items-center gap-8 text-sm font-semibold text-slate-700 lg:flex">
+        <a class="flex h-full items-center border-b-2 border-brand text-brand" href="#home">Home</a>
+        <a class="hover:text-brand" href="#services">Services</a>
+        <a class="hover:text-brand" href="#projects">Projects</a>
+        <a class="hover:text-brand" href="#pricing">Pricing</a>
+        <a class="hover:text-brand" href="#about">About Us</a>
+        <a class="hover:text-brand" href="#contact">Contact</a>
+      </div>
+
+      <div class="hidden items-center gap-3 md:flex">
+        <a href="tel:+919876543210" class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200">
+          <i data-lucide="phone" class="h-4 w-4"></i>
+          +91 98765 43210
+        </a>
+        <a href="https://wa.me/919999999999?text=Hi%20Websites4U%2C%20I%20want%20a%20premium%20website" class="shine inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-bold text-white shadow-xl shadow-blue-600/25 transition hover:-translate-y-0.5">
+          <svg class="h-4 w-4" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <button id="menuToggle" class="grid h-11 w-11 place-items-center rounded-full bg-white text-slate-900 shadow-sm ring-1 ring-slate-900/10 lg:hidden" aria-label="Open menu">
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="mx-auto mt-3 hidden max-w-7xl rounded-3xl border border-slate-200 bg-white/90 p-4 shadow-2xl shadow-slate-900/10 backdrop-blur-xl lg:hidden">
+      <div class="grid gap-2 text-sm font-bold text-slate-700">
+        <a class="rounded-2xl px-4 py-3 hover:bg-slate-50" href="#services">Services</a>
+        <a class="rounded-2xl px-4 py-3 hover:bg-slate-50" href="#projects">Projects</a>
+        <a class="rounded-2xl px-4 py-3 hover:bg-slate-50" href="#pricing">Pricing</a>
+        <a class="rounded-2xl px-4 py-3 hover:bg-slate-50" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="home">
+    <section class="relative overflow-hidden px-4 pb-8 pt-28 md:pt-32">
+      <div class="orb left-[-8rem] top-24 bg-blue-200"></div>
+      <div class="orb right-[-10rem] top-10 bg-sky-100"></div>
+
+      <span class="particle left-[8%] top-[26%]"></span>
+      <span class="particle left-[42%] top-[18%]"></span>
+      <span class="particle right-[13%] top-[31%]"></span>
+      <span class="particle bottom-[18%] left-[18%]"></span>
+
+      <div class="hero-grid mx-auto grid max-w-[1370px] items-center gap-8 lg:gap-12">
+        <div class="hero-copy reveal min-w-0">
+          <div class="hero-eyebrow mb-7 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs font-black uppercase tracking-wide text-slate-600 shadow-sm backdrop-blur-xl">
+            <span class="grid h-6 w-6 place-items-center rounded-full bg-amber-50 text-amber-500">
+              <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i>
+            </span>
+            Top rated web design agency in India
+          </div>
+
+          <h1 class="hero-title max-w-5xl text-5xl font-black leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+            <span class="block sm:inline">We Build</span> <span class="block sm:inline">Premium</span><span class="block">Websites That</span><span class="hero-blue">Grow Your Business</span>
+          </h1>
+
+          <p class="mt-7 max-w-xl text-lg leading-8 text-slate-600">
+            Modern websites for schools, colleges, ecommerce brands, cafes, hotels, startups, news portals and mobile apps — optimized for SEO, speed and WhatsApp leads.
+          </p>
+
+          <div class="hero-ctas mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="https://wa.me/919999999999?text=Hi%20Websites4U%2C%20I%20want%20a%20free%20website%20demo" class="shine inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 text-base font-extrabold text-white shadow-2xl shadow-blue-600/25 transition hover:-translate-y-1">
+              <svg class="h-5 w-5" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+              Chat on WhatsApp
+            </a>
+            <a href="#projects" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-4 text-base font-extrabold text-slate-900 shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:border-blue-200">
+              <span class="grid h-6 w-6 place-items-center rounded-full border border-slate-300"><i data-lucide="play" class="h-3.5 w-3.5 fill-current"></i></span>
+              View Our Projects
+            </a>
+          </div>
+
+        </div>
+
+        <div id="heroVisual" class="hero-stage reveal relative min-h-[470px] min-w-0 overflow-visible lg:min-h-[590px]">
+          <img class="hero-art absolute object-contain" src="assets/trendify-hero-mockup.svg" alt="Premium laptop and mobile website mockups for Websites4U">
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden px-4 pb-5">
+      <button class="showcase-prev absolute left-2 top-1/2 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white text-slate-700 shadow-lg shadow-slate-900/10" aria-label="Previous showcase"><i data-lucide="chevron-left" class="h-5 w-5"></i></button>
+      <div class="reveal mx-auto max-w-[1360px] rounded-[2rem] border border-slate-200 bg-white/80 px-5 py-4 shadow-glass backdrop-blur-xl">
+        <div class="swiper showcaseSwiper">
+          <div class="swiper-wrapper pb-1">
+            <div class="swiper-slide !w-[164px]">
+              <article class="industry-card rounded-2xl p-3 text-center transition duration-300 hover:-translate-y-1">
+                <img class="industry-preview" src="assets/industry-preview-school.png" alt="School website preview">
+                <h3 class="mt-2 text-sm font-black leading-tight text-ink">School Websites</h3>
+                <p class="mt-0.5 text-xs font-medium text-slate-500">Smart & Modern</p>
+              </article>
+            </div>
+            <div class="swiper-slide !w-[164px]">
+              <article class="industry-card rounded-2xl p-3 text-center transition duration-300 hover:-translate-y-1">
+                <img class="industry-preview" src="assets/industry-preview-college.png" alt="College portal preview">
+                <h3 class="mt-2 text-sm font-black leading-tight text-ink">College Portals</h3>
+                <p class="mt-0.5 text-xs font-medium text-slate-500">Professional & Fast</p>
+              </article>
+            </div>
+            <div class="swiper-slide !w-[164px]">
+              <article class="industry-card rounded-2xl p-3 text-center transition duration-300 hover:-translate-y-1">
+                <img class="industry-preview" src="assets/industry-preview-cafe.png" alt="Cafe website preview">
+                <h3 class="mt-2 text-sm font-black leading-tight text-ink">Cafe Websites</h3>
+                <p class="mt-0.5 text-xs font-medium text-slate-500">Online Ordering</p>
+              </article>
+            </div>
+            <div class="swiper-slide !w-[164px]">
+              <article class="industry-card rounded-2xl p-3 text-center transition duration-300 hover:-translate-y-1">
+                <img class="industry-preview" src="assets/industry-preview-hotel.png" alt="Hotel website preview">
+                <h3 class="mt-2 text-sm font-black leading-tight text-ink">Hotel Websites</h3>
+                <p class="mt-0.5 text-xs font-medium text-slate-500">Booking & Rooms</p>
+              </article>
+            </div>
+            <div class="swiper-slide !w-[164px]">
+              <article class="industry-card rounded-2xl p-3 text-center transition duration-300 hover:-translate-y-1">
+                <img class="industry-preview" src="assets/industry-preview-news.png" alt="News portal preview">
+                <h3 class="mt-2 text-sm font-black leading-tight text-ink">News Portals</h3>
+                <p class="mt-0.5 text-xs font-medium text-slate-500">SEO Optimized</p>
+              </article>
+            </div>
+            <div class="swiper-slide !w-[164px]">
+              <article class="industry-card rounded-2xl p-3 text-center transition duration-300 hover:-translate-y-1">
+                <img class="industry-preview" src="assets/industry-preview-ecommerce.png" alt="Ecommerce website preview">
+                <h3 class="mt-2 text-sm font-black leading-tight text-ink">Ecommerce Stores</h3>
+                <p class="mt-0.5 text-xs font-medium text-slate-500">High Converting</p>
+              </article>
+            </div>
+            <div class="swiper-slide !w-[164px]">
+              <article class="industry-card rounded-2xl p-3 text-center transition duration-300 hover:-translate-y-1">
+                <img class="industry-preview" src="assets/industry-preview-mobile.png" alt="Mobile app UI preview">
+                <h3 class="mt-2 text-sm font-black leading-tight text-ink">Mobile App UI</h3>
+                <p class="mt-0.5 text-xs font-medium text-slate-500">Beautiful & Smooth</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="showcase-next absolute right-2 top-1/2 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white text-slate-700 shadow-lg shadow-slate-900/10" aria-label="Next showcase"><i data-lucide="chevron-right" class="h-5 w-5"></i></button>
+    </section>
+
+    <section class="px-4 pb-16 pt-4">
+      <div class="mx-auto grid max-w-[1160px] gap-4 rounded-[2rem] border border-slate-200 bg-white/85 p-5 shadow-glass backdrop-blur-xl md:grid-cols-6">
+        <div class="reveal flex items-center gap-4 border-slate-200 md:border-r"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-brand"><i data-lucide="package" class="h-6 w-6"></i></span><div><div class="text-2xl font-black counter" data-count="50">0</div><p class="text-xs font-semibold text-slate-500">Projects Delivered</p></div></div>
+        <div class="reveal flex items-center gap-4 border-slate-200 md:border-r"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-brand"><i data-lucide="star" class="h-6 w-6"></i></span><div><div class="text-2xl font-black">100%</div><p class="text-xs font-semibold text-slate-500">Client Satisfaction</p></div></div>
+        <div class="reveal flex items-center gap-4 border-slate-200 md:border-r"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-brand"><i data-lucide="zap" class="h-6 w-6"></i></span><div><div class="text-2xl font-black">Fast</div><p class="text-xs font-semibold text-slate-500">Delivery</p></div></div>
+        <div class="reveal flex items-center gap-4 border-slate-200 md:border-r"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-brand"><i data-lucide="chart-no-axes-combined" class="h-6 w-6"></i></span><div><div class="text-2xl font-black">SEO</div><p class="text-xs font-semibold text-slate-500">Optimized</p></div></div>
+        <div class="reveal flex items-center gap-4 border-slate-200 md:border-r"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-brand"><i data-lucide="smartphone" class="h-6 w-6"></i></span><div><div class="text-2xl font-black">Mobile</div><p class="text-xs font-semibold text-slate-500">Responsive</p></div></div>
+        <div class="reveal flex items-center gap-4"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-emerald-50 text-emerald-600"><svg class="h-6 w-6" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg></span><div><div class="text-2xl font-black">WhatsApp</div><p class="text-xs font-semibold text-slate-500">Lead System</p></div></div>
+      </div>
+    </section>
+
+    <section id="services" class="services-logo-grid relative px-4 py-20">
+      <div class="mx-auto max-w-[1460px]">
+        <div class="reveal mx-auto mb-10 max-w-4xl text-center">
+          <span class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-black uppercase tracking-wide text-brand"><i data-lucide="sparkles" class="h-4 w-4"></i> Our Expertise</span>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-ink md:text-6xl">Premium <span class="text-brand">Services</span> Included</h2>
+          <p class="mt-4 text-base leading-7 text-muted">Everything you need to launch, manage and grow your business online.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/wordpress.svg" alt="WordPress logo"><div><h3 class="text-lg font-black leading-5 text-ink">Custom Web Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Powerful, scalable and custom website builds.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/shopify.svg" alt="Shopify logo"><div><h3 class="text-lg font-black leading-5 text-ink">E-commerce Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Secure, high-converting online stores.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/figma.svg" alt="Figma logo"><div><h3 class="text-lg font-black leading-5 text-ink">Web Design</h3><p class="mt-3 text-xs leading-5 text-slate-500">Creative, modern and user-focused interfaces.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/google-ads.svg" alt="Google Ads logo"><div><h3 class="text-lg font-black leading-5 text-ink">Landing Pages</h3><p class="mt-3 text-xs leading-5 text-slate-500">High-converting pages built for campaigns.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/google.svg" alt="Google logo"><div><h3 class="text-lg font-black leading-5 text-ink">Website SEO Optimization</h3><p class="mt-3 text-xs leading-5 text-slate-500">Rank higher and get found by your audience.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/pagespeed.svg" alt="PageSpeed Insights logo"><div><h3 class="text-lg font-black leading-5 text-ink">Website Speed Optimization</h3><p class="mt-3 text-xs leading-5 text-slate-500">Lightning-fast websites for better performance.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/github.svg" alt="GitHub logo"><div><h3 class="text-lg font-black leading-5 text-ink">White Label Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Reliable white label solutions for agencies.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/cloudflare.svg" alt="Cloudflare logo"><div><h3 class="text-lg font-black leading-5 text-ink">Website Migration</h3><p class="mt-3 text-xs leading-5 text-slate-500">Seamless and secure website migration.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/cpanel.svg" alt="cPanel logo"><div><h3 class="text-lg font-black leading-5 text-ink">Web Hosting</h3><p class="mt-3 text-xs leading-5 text-slate-500">Fast, secure and reliable hosting setup.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/wordpress.svg" alt="WordPress logo"><div><h3 class="text-lg font-black leading-5 text-ink">WordPress Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Custom WordPress solutions tailored to your needs.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/react.svg" alt="React logo"><div><h3 class="text-lg font-black leading-5 text-ink">React Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Fast, dynamic and scalable React applications.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/webflow.svg" alt="Webflow logo"><div><h3 class="text-lg font-black leading-5 text-ink">Webflow Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Stunning Webflow websites with smooth interactions.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/nextjs.svg" alt="Next.js logo"><div><h3 class="text-lg font-black leading-5 text-ink">Next.js Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">SEO-friendly, fast and modern web apps.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/html5.svg" alt="HTML5 logo"><div><h3 class="text-lg font-black leading-5 text-ink">HTML Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Clean, semantic and standards-compliant code.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/magento.svg" alt="Magento logo"><div><h3 class="text-lg font-black leading-5 text-ink">Magento Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Robust e-commerce solutions with Magento.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/squarespace.svg" alt="Squarespace logo"><div><h3 class="text-lg font-black leading-5 text-ink">Squarespace Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Beautiful responsive websites on Squarespace.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/wix.svg" alt="Wix logo"><div><h3 class="text-lg font-black leading-5 text-ink">Wix Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Custom Wix websites that stand out.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/adobe-xd.svg" alt="Adobe XD logo"><div><h3 class="text-lg font-black leading-5 text-ink">Figma & XD Design</h3><p class="mt-3 text-xs leading-5 text-slate-500">Pixel-perfect designs brought to life.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+          <article class="brand-service-card reveal group relative flex items-center gap-6 rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-premium"><img class="brand-service-logo" src="assets/logos/woocommerce.svg" alt="WooCommerce logo"><div><h3 class="text-lg font-black leading-5 text-ink">WooCommerce Development</h3><p class="mt-3 text-xs leading-5 text-slate-500">Powerful WooCommerce stores that sell.</p><span class="mt-2 grid h-6 w-6 place-items-center rounded-full bg-blue-50 text-brand"><i data-lucide="arrow-right" class="h-3.5 w-3.5"></i></span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="why-section relative overflow-hidden px-4 py-18">
+      <div class="absolute bottom-10 left-10 hidden h-28 w-28 bg-[radial-gradient(circle,#93c5fd_1.5px,transparent_1.7px)] [background-size:22px_22px] opacity-70 md:block"></div>
+      <div class="absolute right-0 top-0 hidden h-72 w-72 rounded-bl-full bg-blue-50/80 md:block"></div>
+      <div class="mx-auto max-w-[1460px]">
+        <div class="grid gap-12 lg:grid-cols-[.82fr_1fr] lg:items-center">
+          <div class="reveal">
+            <span class="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-black uppercase tracking-wide text-brand"><i data-lucide="star" class="h-4 w-4 fill-current"></i> Why Websites4U</span>
+            <h2 class="mt-6 max-w-[540px] text-4xl font-black leading-[1.12] tracking-tight text-ink md:text-6xl">Why Smart Businesses Choose <span class="text-brand">Websites4U</span></h2>
+            <div class="ml-10 mt-2 h-2.5 w-72 max-w-[70%] rounded-full bg-blue-200/80"></div>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-muted">We combine premium design with powerful technology to deliver websites that don't just look amazing, they generate leads, build trust and grow your business.</p>
+            <button data-open-demo class="mt-8 inline-flex items-center gap-3 rounded-2xl bg-ink px-7 py-4 text-base font-extrabold text-white shadow-2xl shadow-blue-950/20 transition hover:-translate-y-1 hover:bg-brand">
+              Get Free Demo
+              <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+            </button>
+            <div class="mt-14 grid max-w-xl gap-4 rounded-[1.75rem] border border-slate-200 bg-white/88 p-5 shadow-glass backdrop-blur-xl sm:grid-cols-3">
+              <div class="flex items-center gap-3"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-brand"><i data-lucide="users" class="h-6 w-6"></i></span><div><div class="text-2xl font-black">500+</div><p class="text-xs font-semibold text-slate-500">Happy Clients</p></div></div>
+              <div class="flex items-center gap-3"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-brand"><i data-lucide="shield-check" class="h-6 w-6"></i></span><div><div class="text-2xl font-black">50+</div><p class="text-xs font-semibold text-slate-500">Projects Delivered</p></div></div>
+              <div class="flex items-center gap-3"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-brand"><i data-lucide="star" class="h-6 w-6"></i></span><div><div class="text-2xl font-black">100%</div><p class="text-xs font-semibold text-slate-500">Client Satisfaction</p></div></div>
+            </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <article class="why-card reveal relative rounded-[1.75rem] p-6 backdrop-blur-xl"><span class="grid h-16 w-16 place-items-center rounded-full bg-blue-50 text-brand shadow-lg shadow-blue-600/10"><i data-lucide="pen-tool" class="h-8 w-8"></i></span><h3 class="mt-6 text-xl font-black">Premium UI/UX</h3><p class="mt-3 text-base leading-7 text-slate-500">Modern, clean and conversion-focused designs that create strong first impressions.</p></article>
+            <article class="why-card reveal relative rounded-[1.75rem] p-6 backdrop-blur-xl"><span class="grid h-16 w-16 place-items-center rounded-full bg-blue-50 text-brand shadow-lg shadow-blue-600/10"><i data-lucide="search-check" class="h-8 w-8"></i></span><h3 class="mt-6 text-xl font-black">SEO Ready</h3><p class="mt-3 text-base leading-7 text-slate-500">Every website is built with SEO best practices to help you rank higher on Google.</p></article>
+            <article class="why-card reveal relative rounded-[1.75rem] p-6 backdrop-blur-xl"><span class="grid h-16 w-16 place-items-center rounded-full bg-blue-50 text-brand shadow-lg shadow-blue-600/10"><i data-lucide="rocket" class="h-8 w-8"></i></span><h3 class="mt-6 text-xl font-black">Fast Delivery</h3><p class="mt-3 text-base leading-7 text-slate-500">On-time delivery without compromising on quality. We value your time.</p></article>
+            <article class="why-card reveal relative rounded-[1.75rem] p-6 backdrop-blur-xl"><span class="grid h-16 w-16 place-items-center rounded-full bg-blue-50 text-brand shadow-lg shadow-blue-600/10"><i data-lucide="layout-dashboard" class="h-8 w-8"></i></span><h3 class="mt-6 text-xl font-black">Admin Panel Included</h3><p class="mt-3 text-base leading-7 text-slate-500">Easy-to-use admin panel to manage your website content without any coding.</p></article>
+            <article class="why-card reveal relative rounded-[1.75rem] p-6 backdrop-blur-xl"><span class="grid h-16 w-16 place-items-center rounded-full bg-blue-50 text-brand shadow-lg shadow-blue-600/10"><i data-lucide="smartphone" class="h-8 w-8"></i></span><h3 class="mt-6 text-xl font-black">Mobile First</h3><p class="mt-3 text-base leading-7 text-slate-500">100% responsive websites that look perfect on every device and screen size.</p></article>
+            <article class="why-card reveal relative rounded-[1.75rem] p-6 backdrop-blur-xl"><span class="grid h-16 w-16 place-items-center rounded-full bg-blue-50 text-brand shadow-lg shadow-blue-600/10"><svg class="h-8 w-8" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg></span><h3 class="mt-6 text-xl font-black">WhatsApp Lead System</h3><p class="mt-3 text-base leading-7 text-slate-500">Integrated WhatsApp features that help you convert visitors into real customers.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="portfolio-showcase overflow-hidden px-4 py-20">
+      <div class="mx-auto max-w-[1460px]">
+        <div class="grid gap-10 lg:grid-cols-[.78fr_1.22fr] lg:items-start">
+          <div class="reveal pt-5">
+            <span class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-black uppercase tracking-wide text-brand"><i data-lucide="layout-grid" class="h-4 w-4"></i> Portfolio</span>
+            <h2 class="mt-8 max-w-[560px] text-5xl font-black leading-[1.08] tracking-tight text-ink md:text-7xl">
+              Live project showcase with a <span class="text-brand">luxury case-study</span> feel.
+            </h2>
+            <div class="mt-8 h-1 w-20 rounded-full bg-brand"></div>
+            <p class="mt-7 max-w-md text-xl font-medium leading-8 text-muted">Handpicked projects. Real results. Modern design. Powerful performance.</p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="https://wa.me/919999999999?text=Hi%20Websites4U%2C%20show%20me%20portfolio%20examples" class="shine inline-flex items-center justify-center gap-3 rounded-full bg-brand px-8 py-5 font-black text-white shadow-xl shadow-blue-600/25 transition hover:-translate-y-1">
+                Request Full Portfolio
+                <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+              </a>
+              <a href="#services" class="inline-flex items-center justify-center gap-3 rounded-full border border-slate-200 bg-white px-8 py-5 font-black text-ink shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:border-blue-200">
+                <span class="grid h-7 w-7 place-items-center rounded-full border border-blue-200 text-brand"><i data-lucide="play" class="h-3.5 w-3.5 fill-current"></i></span>
+                View Process
+              </a>
+            </div>
+          </div>
+
+          <div class="grid gap-5">
+            <article class="case-card reveal group relative overflow-hidden rounded-[2rem]">
+              <div class="portfolio-img absolute inset-0 scale-105 transition duration-700 group-hover:scale-110" style="background-image:url('assets/ecommerce-laptop-case.png')"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-slate-950/10 via-transparent to-transparent"></div>
+              <div class="relative flex min-h-[300px] flex-col justify-between p-8 text-white md:p-10">
+              </div>
+            </article>
+
+            <div class="grid gap-5 md:grid-cols-2">
+              <article class="case-card-sm reveal group relative overflow-hidden rounded-[2rem]">
+                <div class="portfolio-img absolute inset-0 scale-105 transition duration-700 group-hover:scale-110" style="background-image:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=85')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/78 via-slate-950/24 to-transparent"></div>
+                <div class="relative flex min-h-[220px] flex-col justify-between p-7 text-white">
+                  <span class="grid h-14 w-14 place-items-center rounded-full bg-white text-orange-500 shadow-xl"><i data-lucide="coffee" class="h-6 w-6"></i></span>
+                  <div><p class="text-sm font-black uppercase tracking-wider text-white/75">Cafe Website</p><h3 class="mt-2 text-2xl font-black">Menu and orders</h3></div>
+                  <span class="absolute bottom-7 right-7 grid h-12 w-12 place-items-center rounded-full bg-white text-ink shadow-lg"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span>
+                </div>
+              </article>
+              <article class="case-card-sm reveal group relative overflow-hidden rounded-[2rem]">
+                <div class="portfolio-img absolute inset-0 scale-105 transition duration-700 group-hover:scale-110" style="background-image:url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=85')"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-950/76 via-blue-950/24 to-transparent"></div>
+                <div class="relative flex min-h-[220px] flex-col justify-between p-7 text-white">
+                  <span class="grid h-14 w-14 place-items-center rounded-full bg-white text-brand shadow-xl"><i data-lucide="building-2" class="h-6 w-6"></i></span>
+                  <div><p class="text-sm font-black uppercase tracking-wider text-white/75">Hotel Website</p><h3 class="mt-2 text-2xl font-black">Booking-ready</h3></div>
+                  <span class="absolute bottom-7 right-7 grid h-12 w-12 place-items-center rounded-full bg-white text-ink shadow-lg"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <article class="product-preview-card reveal mt-8 grid gap-0 overflow-hidden rounded-[2rem] p-8 md:grid-cols-4 md:p-10">
+          <div class="border-slate-200 p-6 text-center md:border-r">
+            <span class="mx-auto grid h-20 w-20 place-items-center rounded-3xl bg-blue-50 text-brand"><i data-lucide="tablet-smartphone" class="h-9 w-9"></i></span>
+            <h3 class="mt-6 font-black text-ink">Mobile First Approach</h3>
+            <p class="mx-auto mt-3 max-w-[170px] leading-7 text-slate-500">Perfect experience on every device.</p>
+          </div>
+          <div class="border-slate-200 p-6 text-center md:border-r">
+            <span class="mx-auto grid h-20 w-20 place-items-center rounded-3xl bg-violet-50 text-violet-600"><i data-lucide="palette" class="h-9 w-9"></i></span>
+            <h3 class="mt-6 font-black text-ink">Clean & Modern Design</h3>
+            <p class="mx-auto mt-3 max-w-[170px] leading-7 text-slate-500">Built with clarity and simplicity.</p>
+          </div>
+          <div class="border-slate-200 p-6 text-center md:border-r">
+            <span class="mx-auto grid h-20 w-20 place-items-center rounded-3xl bg-emerald-50 text-emerald-600"><i data-lucide="zap" class="h-9 w-9"></i></span>
+            <h3 class="mt-6 font-black text-ink">Fast & Smooth Experience</h3>
+            <p class="mx-auto mt-3 max-w-[170px] leading-7 text-slate-500">Optimized for speed and performance.</p>
+          </div>
+          <div class="p-6 text-center">
+            <span class="mx-auto grid h-20 w-20 place-items-center rounded-3xl bg-orange-50 text-orange-500"><i data-lucide="shield-check" class="h-9 w-9"></i></span>
+            <h3 class="mt-6 font-black text-ink">Reliable & Secure</h3>
+            <p class="mx-auto mt-3 max-w-[170px] leading-7 text-slate-500">Your data and security are our priority.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="px-4 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <span class="section-label">Pricing</span>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-ink md:text-6xl">Clear plans for serious launches.</h2>
+          <p class="mt-5 text-lg leading-8 text-muted">Start lean, grow into custom development, and keep WhatsApp leads at the center.</p>
+        </div>
+
+        <div class="mt-14 grid gap-5 lg:grid-cols-3">
+          <article class="reveal rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:shadow-premium">
+            <h3 class="text-2xl font-black">Starter Plan</h3>
+            <div class="mt-5 text-5xl font-black">₹7,999</div>
+            <p class="mt-3 leading-7 text-slate-500">Small business website with core conversion sections.</p>
+            <ul class="mt-7 space-y-4 font-semibold text-slate-700"><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>Small business website</li><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>Mobile responsive</li><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>WhatsApp integration</li></ul>
+            <a href="https://wa.me/919999999999?text=I%20want%20the%20Starter%20Plan" class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-200 px-5 py-4 font-extrabold transition hover:border-blue-200 hover:text-brand">Chat Now <svg class="h-4 w-4" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg></a>
+          </article>
+          <article class="reveal relative rounded-[2rem] border border-blue-200 bg-white p-8 shadow-2xl shadow-blue-600/15 transition hover:-translate-y-1">
+            <div class="absolute right-6 top-6 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wider text-white">Most Popular</div>
+            <h3 class="text-2xl font-black">Business Plan</h3>
+            <div class="mt-5 text-5xl font-black">₹14,999</div>
+            <p class="mt-3 leading-7 text-slate-500">Premium UI, admin-panel-ready structure and growth features.</p>
+            <ul class="mt-7 space-y-4 font-semibold text-slate-700"><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>SEO optimized</li><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>Admin panel</li><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>Speed optimization</li><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>Premium UI</li></ul>
+            <a href="https://wa.me/919999999999?text=I%20want%20the%20Business%20Plan" class="shine mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-5 py-4 font-extrabold text-white shadow-xl shadow-blue-600/25 transition hover:-translate-y-1">Chat Now <svg class="h-4 w-4" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg></a>
+          </article>
+          <article class="reveal rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg shadow-slate-900/5 transition hover:-translate-y-1 hover:shadow-premium">
+            <h3 class="text-2xl font-black">Premium Plan</h3>
+            <div class="mt-5 text-5xl font-black">₹29,999+</div>
+            <p class="mt-3 leading-7 text-slate-500">Custom development for advanced workflows and dashboards.</p>
+            <ul class="mt-7 space-y-4 font-semibold text-slate-700"><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>Custom development</li><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>Advanced features</li><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>API integration</li><li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 text-brand"></i>Custom dashboard</li></ul>
+            <a href="https://wa.me/919999999999?text=I%20want%20the%20Premium%20Plan" class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-200 px-5 py-4 font-extrabold transition hover:border-blue-200 hover:text-brand">Chat Now <svg class="h-4 w-4" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden px-4 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mb-12 max-w-3xl">
+          <span class="section-label">Testimonials</span>
+          <h2 class="mt-5 text-4xl font-black tracking-tight text-ink md:text-6xl">Clients feel the upgrade immediately.</h2>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <article class="glass rounded-[2rem] p-6"><div class="flex text-amber-400">★★★★★</div><p class="mt-5 leading-7 text-slate-600">Our school website finally looks professional. Parents now send enquiries directly on WhatsApp.</p><div class="mt-6 flex items-center gap-3"><img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Client"><div><h4 class="font-black">Priya Sharma</h4><p class="text-sm text-slate-500">School Director</p></div></div></article>
+          <article class="glass rounded-[2rem] p-6"><div class="flex text-amber-400">★★★★★</div><p class="mt-5 leading-7 text-slate-600">The ecommerce design feels premium and the loading speed is excellent on mobile.</p><div class="mt-6 flex items-center gap-3"><img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Client"><div><h4 class="font-black">Arjun Mehta</h4><p class="text-sm text-slate-500">D2C Founder</p></div></div></article>
+          <article class="glass rounded-[2rem] p-6"><div class="flex text-amber-400">★★★★★</div><p class="mt-5 leading-7 text-slate-600">Our cafe site made the brand look expensive. Menu enquiries increased in the first week.</p><div class="mt-6 flex items-center gap-3"><img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Client"><div><h4 class="font-black">Neha Kapoor</h4><p class="text-sm text-slate-500">Cafe Owner</p></div></div></article>
+          <article class="glass rounded-[2rem] p-6"><div class="flex text-amber-400">★★★★★</div><p class="mt-5 leading-7 text-slate-600">Clean work, fast delivery and the admin panel planning was exactly what we needed.</p><div class="mt-6 flex items-center gap-3"><img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80" alt="Client"><div><h4 class="font-black">Rohan Iyer</h4><p class="text-sm text-slate-500">Hotel Manager</p></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="px-4 py-24">
+      <div class="reveal mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-ink p-8 text-white shadow-premium md:p-14">
+        <div class="grid gap-10 lg:grid-cols-[1fr_.75fr] lg:items-center">
+          <div>
+            <span class="inline-flex rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white/80">Quick response on WhatsApp</span>
+            <h2 class="mt-6 max-w-3xl text-4xl font-black tracking-tight md:text-6xl">Ready for a premium website demo?</h2>
+            <p class="mt-5 max-w-2xl text-lg leading-8 text-white/70">Tell us your business type and we will suggest a launch-ready structure with pricing, pages and timeline.</p>
+          </div>
+          <div class="rounded-[2rem] border border-white/10 bg-white/8 p-6 backdrop-blur-xl">
+            <div class="grid gap-3">
+              <a href="https://wa.me/919999999999?text=Hi%20Websites4U%2C%20I%20want%20a%20free%20demo" class="shine inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 font-extrabold text-white shadow-xl shadow-blue-600/30">
+                Chat on WhatsApp
+                <svg class="h-5 w-5" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+              </a>
+              <button data-open-demo class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 font-extrabold text-ink">
+                Get Free Demo
+                <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+              </button>
+            </div>
+            <div class="mt-5 grid grid-cols-2 gap-3 text-sm font-bold text-white/72">
+              <span class="rounded-2xl bg-white/8 p-3">Free consultation</span>
+              <span class="rounded-2xl bg-white/8 p-3">Same-day reply</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-cloud px-4 pb-6 pt-12 md:pt-14">
+    <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.05fr_1px_.85fr_.9fr_.85fr] md:gap-12">
+      <div>
+        <div class="text-3xl font-black tracking-tight text-ink">Websites4U</div>
+        <p class="mt-7 max-w-xs text-lg font-medium leading-8 text-slate-600">WEBSITES 4U builds modern, high-performance websites for Indian brands with clean UI, responsive design, fast loading speed, and conversion-focused development.</p>
+        <div class="mt-6 flex items-center gap-4">
+          <a href="https://wa.me/919999999999" class="grid h-12 w-12 place-items-center rounded-full bg-white text-emerald-500 shadow-lg shadow-slate-900/5" aria-label="WhatsApp"><svg class="h-5 w-5" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg></a>
+          <a href="https://instagram.com/" class="grid h-12 w-12 place-items-center rounded-full bg-white text-pink-500 shadow-lg shadow-slate-900/5" aria-label="Instagram"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+          <a href="#" class="grid h-12 w-12 place-items-center rounded-full bg-white text-blue-600 shadow-lg shadow-slate-900/5" aria-label="LinkedIn"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 9.5V19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.5 19V13.8C10.5 11.9 11.7 10.7 13.4 10.7C15.1 10.7 16.3 11.9 16.3 13.8V19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.5 11V19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="6.5" cy="6" r="1.3" fill="currentColor"/><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+      </div>
+      <div class="hidden bg-slate-200 md:block"></div>
+      <div><h4 class="flex items-center gap-4 text-2xl font-black text-ink"><i data-lucide="link" class="h-7 w-7 text-brand"></i> Quick Links</h4><div class="mt-8 grid gap-6 text-lg font-medium text-slate-600"><a class="flex items-center gap-4 hover:text-brand" href="#services"><i data-lucide="chevron-right" class="h-5 w-5 text-brand"></i> Services</a><a class="flex items-center gap-4 hover:text-brand" href="#projects"><i data-lucide="chevron-right" class="h-5 w-5 text-brand"></i> Projects</a><a class="flex items-center gap-4 hover:text-brand" href="#pricing"><i data-lucide="chevron-right" class="h-5 w-5 text-brand"></i> Pricing</a><a class="flex items-center gap-4 hover:text-brand" href="#contact"><i data-lucide="chevron-right" class="h-5 w-5 text-brand"></i> Contact</a></div></div>
+      <div><h4 class="flex items-center gap-4 text-2xl font-black text-ink"><i data-lucide="monitor" class="h-7 w-7 text-brand"></i> Services</h4><div class="mt-8 grid gap-6 text-lg font-medium text-slate-600"><a class="flex items-center gap-4 hover:text-brand" href="#services"><i data-lucide="chevron-right" class="h-5 w-5 text-brand"></i> Website Development</a><a class="flex items-center gap-4 hover:text-brand" href="#services"><i data-lucide="chevron-right" class="h-5 w-5 text-brand"></i> Ecommerce</a><a class="flex items-center gap-4 hover:text-brand" href="#services"><i data-lucide="chevron-right" class="h-5 w-5 text-brand"></i> SEO Optimization</a><a class="flex items-center gap-4 hover:text-brand" href="#services"><i data-lucide="chevron-right" class="h-5 w-5 text-brand"></i> Mobile App UI</a></div></div>
+      <div><h4 class="flex items-center gap-4 text-2xl font-black text-ink"><i data-lucide="phone-call" class="h-7 w-7 text-brand"></i> Contact</h4><div class="mt-8 grid gap-6 text-lg font-medium text-slate-600"><a class="flex items-center gap-4 hover:text-brand" href="https://wa.me/919999999999"><svg class="h-5 w-5 text-slate-700" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg> WhatsApp</a><a class="flex items-center gap-4 hover:text-brand" href="https://instagram.com/"><svg class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg> Instagram</a><a class="flex items-center gap-4 hover:text-brand" href="mailto:hello@websites4u.in"><i data-lucide="mail" class="h-5 w-5 text-brand"></i> hello@websites4u.in</a></div></div>
+    </div>
+    <div class="mx-auto mt-8 max-w-7xl border-t border-slate-200 pt-5 text-sm font-semibold text-slate-500">&copy; 2026 Websites4U. All rights reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/919999999999?text=Hi%20Websites4U%2C%20I%20want%20a%20premium%20website" class="wa-pulse fixed bottom-5 right-5 z-50 hidden h-14 w-14 place-items-center rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/30 transition hover:-translate-y-1 md:grid" aria-label="Chat on WhatsApp">
+    <svg class="h-6 w-6" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+  </a>
+
+  <div class="fixed inset-x-3 bottom-3 z-50 grid grid-cols-2 gap-2 rounded-full border border-slate-200 bg-white/88 p-2 shadow-2xl shadow-slate-900/12 backdrop-blur-xl md:hidden">
+    <a href="https://wa.me/919999999999?text=Hi%20Websites4U%2C%20I%20want%20a%20premium%20website" class="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-sm font-black text-white">
+      <svg class="h-4 w-4" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.03 4C9.42 4 4.04 9.35 4.04 15.93c0 2.1.55 4.15 1.61 5.96L4 28l6.28-1.64a12.04 12.04 0 0 0 5.75 1.46C22.65 27.82 28 22.48 28 15.9 28 9.35 22.65 4 16.03 4Zm0 21.8c-1.75 0-3.47-.47-4.98-1.35l-.36-.22-3.72.98.99-3.62-.24-.38a9.8 9.8 0 0 1-1.5-5.28c0-5.46 4.4-9.9 9.82-9.9 2.63 0 5.1 1.03 6.95 2.9a9.82 9.82 0 0 1 2.88 6.98c0 5.45-4.4 9.89-9.84 9.89Zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+      Chat Now
+    </a>
+    <button data-open-demo class="inline-flex items-center justify-center rounded-full bg-ink px-4 py-3 text-sm font-black text-white">Free Demo</button>
+  </div>
+
+  <div id="demoModal" class="fixed inset-0 z-[70] hidden items-center justify-center bg-slate-950/35 px-4 backdrop-blur-sm">
+    <div class="modal-card w-full max-w-lg rounded-[2rem] bg-white p-6 shadow-2xl">
+      <div class="flex items-start justify-between gap-5">
+        <div>
+          <h3 class="text-2xl font-black">Get your free demo</h3>
+          <p class="mt-2 leading-7 text-slate-500">Share a few details and continue instantly on WhatsApp.</p>
+        </div>
+        <button id="closeModal" class="grid h-10 w-10 place-items-center rounded-full bg-slate-100 text-slate-700" aria-label="Close popup"><i data-lucide="x" class="h-5 w-5"></i></button>
+      </div>
+      <form id="leadForm" class="mt-6 grid gap-3">
+        <input class="rounded-2xl border border-slate-200 px-4 py-4 outline-none transition focus:border-blue-300" name="name" placeholder="Your name" required>
+        <input class="rounded-2xl border border-slate-200 px-4 py-4 outline-none transition focus:border-blue-300" name="business" placeholder="Business type" required>
+        <select class="rounded-2xl border border-slate-200 px-4 py-4 outline-none transition focus:border-blue-300" name="project">
+          <option>School Website</option>
+          <option>College Portal</option>
+          <option>Ecommerce Store</option>
+          <option>Cafe / Hotel Website</option>
+          <option>News Portal</option>
+          <option>Mobile App UI</option>
+          <option>Custom Website</option>
+        </select>
+        <button class="shine mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-4 font-extrabold text-white shadow-xl shadow-blue-600/25">
+          Continue on WhatsApp
+          <i data-lucide="arrow-right" class="h-5 w-5"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    const WHATSAPP_NUMBER = '919999999999';
+
+    lucide.createIcons();
+
+    const navbar = document.getElementById('navbar');
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const modal = document.getElementById('demoModal');
+    const closeModal = document.getElementById('closeModal');
+    const leadForm = document.getElementById('leadForm');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('nav-scrolled', window.scrollY > 24);
+    });
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('[data-open-demo]').forEach((button) => {
+      button.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.classList.add('modal-open');
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('modal-open');
+    });
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal.click();
+    });
+
+    leadForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(leadForm);
+      const message = `Hi Websites4U, I want a free demo.%0AName: ${encodeURIComponent(data.get('name'))}%0ABusiness: ${encodeURIComponent(data.get('business'))}%0AProject: ${encodeURIComponent(data.get('project'))}`;
+      window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    });
+
+    new Swiper('.showcaseSwiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 14,
+      loop: true,
+      speed: 6500,
+      allowTouchMove: true,
+      navigation: {
+        nextEl: '.showcase-next',
+        prevEl: '.showcase-prev'
+      },
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      },
+      freeMode: true,
+      freeModeMomentum: false
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion && window.Lenis) {
+      const lenis = new Lenis({
+        duration: 1.18,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        wheelMultiplier: .92,
+        touchMultiplier: 1.2
+      });
+
+      lenis.on('scroll', ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          const target = link.getAttribute('href');
+          if (target && target.length > 1 && document.querySelector(target)) {
+            event.preventDefault();
+            lenis.scrollTo(target, { offset: -96, duration: 1.05 });
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      });
+    }
+
+    if (!prefersReducedMotion) {
+      gsap.set('.reveal, .rv', {
+        autoAlpha: 0,
+        y: 34
+      });
+
+      gsap.set('.rv-l', {
+        autoAlpha: 0,
+        x: -42
+      });
+
+      gsap.set('.rv-r', {
+        autoAlpha: 0,
+        x: 42
+      });
+
+      gsap.utils.toArray('.reveal, .rv, .rv-l, .rv-r').forEach((element) => {
+        gsap.to(element, {
+          autoAlpha: 1,
+          x: 0,
+          y: 0,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 86%',
+            toggleActions: 'play none none none',
+            onEnter: () => element.classList.add('is-visible')
+          }
+        });
+      });
+
+      gsap.fromTo('.hero-copy > *',
+        { y: 22 },
+        {
+          y: 0,
+          duration: .9,
+          stagger: .09,
+          ease: 'power3.out',
+          delay: .15
+        }
+      );
+    } else {
+      document.querySelectorAll('.reveal, .rv, .rv-l, .rv-r').forEach((element) => {
+        element.classList.add('is-visible');
+      });
+    }
+
+    gsap.to('.particle', {
+      y: -28,
+      x: 18,
+      opacity: .8,
+      duration: 3.8,
+      stagger: .25,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+
+    gsap.to('.floating-card', {
+      y: -18,
+      duration: 3.2,
+      stagger: .35,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+
+    gsap.utils.toArray('.counter').forEach((counter) => {
+      const target = Number(counter.dataset.count);
+      ScrollTrigger.create({
+        trigger: counter,
+        start: 'top 88%',
+        once: true,
+        onEnter: () => {
+          gsap.fromTo(counter, { innerText: 0 }, {
+            innerText: target,
+            duration: 1.8,
+            snap: { innerText: 1 },
+            ease: 'power2.out',
+            onUpdate: () => counter.textContent = `${Math.ceil(counter.innerText)}+`
+          });
+        }
+      });
+    });
+
+    document.querySelectorAll('.industry-card, .brand-service-card, .why-card, .case-card, .case-card-sm, .product-preview-card, #pricing article, .tilt').forEach((card) => {
+      card.classList.add('tilt');
+      card.addEventListener('mousemove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const rotateY = ((x / rect.width) - .5) * 10;
+        const rotateX = ((y / rect.height) - .5) * -10;
+        gsap.to(card, {
+          rotateX,
+          rotateY,
+          y: -6,
+          duration: .35,
+          ease: 'power3.out',
+          transformPerspective: 900,
+          transformOrigin: 'center'
+        });
+      });
+
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+          rotateX: 0,
+          rotateY: 0,
+          y: 0,
+          duration: .55,
+          ease: 'elastic.out(1, .45)'
+        });
+      });
+    });
+
+    const progressBar = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const total = document.body.scrollHeight - window.innerHeight;
+      progressBar.style.width = total > 0 ? `${(window.scrollY / total) * 100}%` : '0%';
+    };
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    const cursorGlow = document.getElementById('cursor-glow');
+    window.addEventListener('mousemove', (event) => {
+      cursorGlow.style.left = `${event.clientX}px`;
+      cursorGlow.style.top = `${event.clientY}px`;
+    }, { passive: true });
+
+    document.querySelectorAll('.hero-title .text-brand, .hero-title .hero-blue').forEach((element) => {
+      element.classList.add('hero-gradient-word');
+    });
+
+    document.querySelectorAll('nav a, #mobileMenu a').forEach((link) => {
+      link.classList.add('nav-link-anim');
+    });
+
+    const staggerTargets = document.querySelectorAll('#services .grid, #projects .grid, #pricing .grid, .why-section .grid');
+    const staggerObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('stagger-grid', 'in-view');
+          staggerObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .08 });
+
+    staggerTargets.forEach((grid) => {
+      grid.classList.add('stagger-grid');
+      staggerObserver.observe(grid);
+    });
+
+    const whyObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          whyObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .2 });
+
+    document.querySelectorAll('.why-card').forEach((card) => whyObserver.observe(card));
+
+    const pricingCards = document.querySelectorAll('#pricing article');
+    const priceObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('price-pop');
+          entry.target.style.animationDelay = `${Array.from(pricingCards).indexOf(entry.target) * .12}s`;
+          priceObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .15 });
+
+    pricingCards.forEach((card) => priceObserver.observe(card));
+
+    if (!prefersReducedMotion && window.gsap && window.ScrollTrigger) {
+      gsap.to('.hero-art', {
+        yPercent: -12,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero-art',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.2
+        }
+      });
+
+      gsap.to('.hero-copy', {
+        yPercent: 6,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero-copy',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.5
+        }
+      });
+
+      gsap.utils.toArray('h2.font-black, h2.tracking-tight').forEach((heading) => {
+        gsap.fromTo(heading,
+          { autoAlpha: 0, y: 40, scale: .97 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1,
+            duration: .9,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: heading,
+              start: 'top 85%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
+      });
+
+      gsap.utils.toArray('.section-label').forEach((label) => {
+        gsap.fromTo(label,
+          { autoAlpha: 0, scale: .6 },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            duration: .5,
+            ease: 'back.out(2)',
+            scrollTrigger: {
+              trigger: label,
+              start: 'top 88%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
+      });
+
+      gsap.fromTo('#contact .bg-ink',
+        { autoAlpha: 0, y: 60, scale: .96 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          scale: 1,
+          duration: 1.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '#contact',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+
+      gsap.fromTo('footer > div > *',
+        { autoAlpha: 0, y: 28 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: .8,
+          stagger: .1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: 'footer',
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    }
+
+    const testimonialTrack = document.querySelector('.marquee-track');
+    if (testimonialTrack) {
+      testimonialTrack.addEventListener('mouseenter', () => {
+        testimonialTrack.style.animationPlayState = 'paused';
+      });
+      testimonialTrack.addEventListener('mouseleave', () => {
+        testimonialTrack.style.animationPlayState = 'running';
+      });
+    }
+  </script>
+</body>
+</html>
